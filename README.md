@@ -7,8 +7,14 @@ When embedding the binary data into the PNG, the
 
 **PNG to binary:** The use of the alpha channel allows the extraction utility to differentiate between pixels that contain data (alpha=0xFF, 0xFE, 0xFD, depending on if there are 3, 2 or 1 bytes of data embedded in the pixel) and those pixels that are simply there to pad the image to provide it with a rectangular shape (alpha=0x00). The binary data is writtend in the same order as it is found in the image.
 
-The class can be downloaded with _git clone https://github.com/iagustsson/bin2png_,
+The class can be downloaded with
+
+_git clone https://github.com/iagustsson/bin2png_,
+
 compiled with
+
 _javac -d mods/com.iagustsson.bin2png src/com.iagustsson.bin2png/module-info.java src/com.iagustsson.bin2png/com/iagustsson/bin2png/Bin2PNG.java src/com.iagustsson.bin2png/com/iagustsson/bin2png/SimpleRenderedImage.java_,
+
 and run by
+
 _java --module-path mods -m com.iagustsson.bin2png/com.iagustsson.bin2png.Bin2PNG_
