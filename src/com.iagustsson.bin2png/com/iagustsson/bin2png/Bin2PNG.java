@@ -50,7 +50,7 @@ import java.util.zip.ZipException;
  * differentiate between pixels that contain data (alpha=0xFF, 0xFE, 0xFD,
  * depending on if there are 3, 2 or 1 bytes of data embedded in the pixel) and
  * those pixels that are simply there to pad the image to provide it with a
- * rectangular shape (alpha=0x00). The binary data is writtend in the same
+ * rectangular shape (alpha=0x00). The binary data is written in the same
  * order as it is found in the image.
  * <p>
  * No preexisting files are every overwritten by this utility.
