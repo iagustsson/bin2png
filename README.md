@@ -9,12 +9,19 @@ When embedding the binary data into the PNG, the
 
 The class can be downloaded with
 
-_git clone https://github.com/iagustsson/bin2png_,
+_git clone https://github.com/iagustsson/bin2png_
 
-compiled with
+within the directory _bin2png_, the class is compiled with
 
-_javac -d mods/com.iagustsson.bin2png src/com.iagustsson.bin2png/module-info.java src/com.iagustsson.bin2png/com/iagustsson/bin2png/Bin2PNG.java src/com.iagustsson.bin2png/com/iagustsson/bin2png/SimpleRenderedImage.java_,
+_javac -d mods/com.iagustsson.bin2png src/com.iagustsson.bin2png/module-info.java src/com.iagustsson.bin2png/com/iagustsson/bin2png/Bin2PNG.java src/com.iagustsson.bin2png/com/iagustsson/bin2png/SimpleRenderedImage.java_
 
 and run by
 
 _java --module-path mods -m com.iagustsson.bin2png/com.iagustsson.bin2png.Bin2PNG_
+
+or for inserting a 10 GiB binary file into a PNG (resulting in a ~11.5 GiB file) and back
+
+_java --module-path mods -m com.iagustsson.bin2png/com.iagustsson.bin2png.Bin2PNG -bin big10G.bin -png big10G.png -out copyof_big10G.bin_
+
+(try comparing the binary files, e.g. using diff -s big10G.bin copyof_big10G.bin, and they are identical).
+
